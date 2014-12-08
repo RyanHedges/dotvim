@@ -1,0 +1,2 @@
+" enable syntax
+syntax on
