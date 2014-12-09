@@ -18,3 +18,6 @@ let mapleader = ","
 
 " Set the word wrap character limit to 78
 set textwidth=78
+
+" Underlines the cursors current line in the file
+set cursorline
