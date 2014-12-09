@@ -15,3 +15,6 @@ set relativenumber
 
 " Remap <Leader> key from \ (backslash) to , (comma)
 let mapleader = ","
+
+" Set the word wrap character limit to 78
+set textwidth=78
