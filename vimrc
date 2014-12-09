@@ -12,3 +12,6 @@ set number
 
 " Line numbers relative to the cursor
 set relativenumber
+
+" Remap <Leader> key from \ (backslash) to , (comma)
+let mapleader = ","
