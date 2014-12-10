@@ -8,7 +8,7 @@ My machine currently has version 7.3 which has missing features that I would lik
 Make sure your homebrew is updated by running `brew doctor` and then `brew update`.
 Then let's install the latest version of VIM available on Homebrew(7.4.488) -
 
-```
+```zsh
 $ brew install vim --override-system-vim
 ```
 I believe that the `--override-system-vim` changes the symlinks to vim so that it uses `/usr/local/bin/vim` instead of `/usr/bin/vim` which is the default for Mac OS. Be sure to start a new terminal sesion and check information about your new vim installation with brew.
@@ -22,7 +22,7 @@ I believe that the `--override-system-vim` changes the symlinks to vim so that i
 
 Features for VIM are added to a `vimrc` file on your computer. The following code will help you create your own.
 
-```
+```zsh
 $ mkdir ~/.vim #=> Creates .vim directory
 $ touch ~/.vim/vimrc #=> Creates the vimrc file in .vim
 $ ln -s /.vim/vimrc ~/.vimrc
@@ -30,7 +30,7 @@ $ ln -s /.vim/vimrc ~/.vimrc
 ```
 It would also be great to set up a git repository for your vim configurations so you can easily spin up on new machines, or see why you added a feature via your commits and README.
 
-```
+```zsh
 $ cd ~/.vim
 $ touch README.md
 $ git init
@@ -64,7 +64,7 @@ correctly.
  working correctly. For me, since I am using `zsh` I added the following to
  my `~/.zshrc` file.
 
-```
+```zsh
 BASE16_SCHEME="ocean"
 BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
@@ -74,7 +74,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
  see color17 through color21 as different colors instead of [shades of
  blue](https://github.com/chriskempson/base16-shell#troubleshooting)
 
-```
+```zsh
 $ cd ~/.config/base16-shell
 $ ./colortest
 ```
@@ -87,12 +87,12 @@ $ ./colortest
 * Now we need to add some settings to our `vimrc` to tell VIM to use the
  colorscheme.
 
-```
+```zsh
 $ cd ~/.vim
 $ vim vimrc
 ```
 
-```
+```vim
 let base16colorspace=256  " base16 requires this to tell it to use 256 color
 space in iTerm
 set background=dark  " Tell vim that colorscheme is on a dark background
