@@ -40,3 +40,62 @@ $ git remote add origin <remote repository URL>
 $ git push origin master
 ```
 
+###Installing Base16 Color Theme
+
+This was very difficult. I'll try to describe how I got everything to work
+correctly.
+
+* You will need to use a diferent terminal. I used [iTerm
+* Nightly](http://iterm2.com/downloads/nightly/#/section/home) starting with
+* 20141115 based on [this
+* issue](https://github.com/chriskempson/base16-vim/issues/35#issuecomment-63165570) for base16 and
+* how it was resolved.
+
+* Set up iTerm to use the colorscheme. I downloaded a ZIP of the
+* [Base16-iterm2 repo](https://github.com/chriskempson/base16-iterm2) and
+* double clicked on the itemcolors that I wanted to be available as presets in
+* my iTerm settings. Be sure to pick the `.256` verions. Verify that iTerm is
+* using 256 colors by going to Preferences>Terminal> Report Terminal Type
+* should be set to `xterm-256color`.
+
+* Next you'll need get
+* [Base16-shell](https://github.com/chriskempson/base16-shell) and follow the
+* directions. This will actually provide you a way to test that everything is
+* working correctly. For me, since I am using `zsh` I added the following to
+* my `~/.zshrc` file.
+
+```
+BASE16_SCHEME="ocean"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+```
+
+* Test that everything is set up correctly regarding your shell. You should
+* see color17 through color21 as different colors instead of [shades of
+* blue](https://github.com/chriskempson/base16-shell#troubleshooting)
+
+```
+$ cd ~/.config/base16-shell
+$ ./colortest
+```
+
+* Install [Base16-vim](https://github.com/chriskempson/base16-vim) so you have
+* the colors for syntax highlighting. After following the steps for the
+* [Manual installation](https://github.com/chriskempson/base16-vim#manual) I
+* removed color profiles that I knew I wouldn't be using.
+
+* Now we need to add some settings to our `vimrc` to tell VIM to use the
+* colorscheme.
+
+```
+$ cd ~/.vim
+$ vim vimrc
+```
+
+```
+let base16colorspace=256  " base16 requires this to tell it to use 256 color
+space in iTerm
+set background=dark  " Tell vim that colorscheme is on a dark background
+colorscheme base16-ocean  " Use the base16-ocean colorscheme
+```
+
