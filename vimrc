@@ -4,6 +4,13 @@ syntax on
 " Tell vim NOT to run in Vi compatible mode
 set nocompatible
 
+" Default tab size is two spaces
+set expandtab     " Use spaces to skip or insert when <BS>ing or <Tab>ing
+set tabstop=2     " Two spaces for tab
+set shiftwidth=2  " Number of spaces to use in each autoindent step
+set softtabstop=2 " Number of spaces to skip or insert when <BS>ing or <Tab>
+set shiftround    " Rounds the tab spaces when using > command
+
 " Turn on ruler
 set ruler
 
