@@ -41,3 +41,5 @@ set showmatch " Show matching bracket when a bracket is inserted
 
 set cmdheight=2 " Make the command entry area consume two rows
 
+set showtabline=2 " ALWAYS show tab line at the top
+
