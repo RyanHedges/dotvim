@@ -1,36 +1,32 @@
-" enable syntax
-syntax on
+" ==== Visual Settings ==== "
 
-" Tell vim NOT to run in Vi compatible mode
-set nocompatible
+  " --- BASE16 Color --- "
+  let base16colorspace=256  " base16 requires this to tell it to use 256 color space in iTerm
+  set background=dark       " Tell vim that colorscheme is on a dark background
+  colorscheme base16-ocean  " Use the base16-ocean colorscheme
 
-" Default tab size is two spaces
-set expandtab     " Use spaces to skip or insert when <BS>ing or <Tab>ing
-set tabstop=2     " Two spaces for tab
-set shiftwidth=2  " Number of spaces to use in each autoindent step
-set softtabstop=2 " Number of spaces to skip or insert when <BS>ing or <Tab>
-set shiftround    " Rounds the tab spaces when using > command
+set relativenumber " Line numbers relative to the cursor
 
-" Turn on ruler
-set ruler
+set ruler " Turn on rulers
 
-" Show line numbers
-set number
+set number " Show line numbers
 
-" Line numbers relative to the cursor
-set relativenumber
+syntax on " enable syntax
 
-" Remap <Leader> key from \ (backslash) to , (comma)
-let mapleader = ","
+set cursorline " Underlines the cursors current line in the file
 
-" Set the word wrap character limit to 78
-set textwidth=78
+" ==== Feature Settings ==== "
 
-" Underlines the cursors current line in the file
-set cursorline
+set nocompatible " Tell vim NOT to run in Vi compatible mode
 
-" --- BASE16 Color ---
-let base16colorspace=256  " base16 requires this to tell it to use 256 color space in iTerm
-set background=dark       " Tell vim that colorscheme is on a dark background
-colorscheme base16-ocean  " Use the base16-ocean colorscheme
+  " --- Tabs --- "
+  set expandtab     " Use spaces to skip or insert when <BS>ing or <Tab>ing
+  set tabstop=2     " Two spaces for tab
+  set shiftwidth=2  " Number of spaces to use in each autoindent step
+  set softtabstop=2 " Number of spaces to skip or insert when <BS>ing or <Tab>
+  set shiftround    " Rounds the tab spaces when using > command
+
+let mapleader = "," " Remap <Leader> key from \ (backslash) to , (comma)
+
+set textwidth=78  " Set the word wrap character limit to 78
 
