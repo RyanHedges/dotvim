@@ -35,7 +35,9 @@ set history=10000 " Number of : command entries to keep in history
 set showmatch " Show matching bracket when a bracket is inserted
 
   " --- Searching --- "
-  set incsearch " Find the next match as we type the search
-  set hlsearch  " Highlight searches matching the search pattern
-  set ignorecase " ignore case when searching
+  set incsearch   " Find the next match as we type the search
+  set hlsearch    " Highlight searches matching the search pattern
+  set ignorecase  " ignore case when searching
+
+set cmdheight=2 " Make the command entry area consume two rows
 
