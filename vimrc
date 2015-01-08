@@ -30,3 +30,4 @@ let mapleader = "," " Remap <Leader> key from \ (backslash) to , (comma)
 
 set textwidth=78  " Set the word wrap character limit to 78
 
+set history=10000 " Number of : command entries to keep in history
