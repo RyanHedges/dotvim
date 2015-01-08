@@ -11,6 +11,8 @@ set ruler " Turn on rulers
 
 set number " Show line numbers
 
+set numberwidth=5 " Min number of characters to use for the line number column
+
 syntax on " enable syntax
 
 set cursorline " Underlines the cursors current line in the file
