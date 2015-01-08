@@ -43,3 +43,5 @@ set cmdheight=2 " Make the command entry area consume two rows
 
 set showtabline=2 " ALWAYS show tab line at the top
 
+set wildmenu " Make tab completion for files/buffers act like bash
+
