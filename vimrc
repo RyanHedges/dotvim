@@ -14,6 +14,7 @@ set number " Show line numbers
 set numberwidth=5 " Min number of characters to use for the line number column
 
 syntax on " enable syntax
+autocmd BufRead,BufNewFile *.md set filetype=markdown
 
 set cursorline " Underlines the cursors current line in the file
 
@@ -45,5 +46,24 @@ set cmdheight=2 " Make the command entry area consume two rows
 
 set showtabline=2 " ALWAYS show tab line at the top
 
-set wildmenu " Make tab completion for files/buffers act like bash
+  " --- Spellcheck --- "
+  autocmd FileType markdown setlocal spell " Enable spellchecking in Markdown
+  autocmd BufRead,BufNewFile *.md setlocal spell " Spell check md files
+  autocmd FileType gitcommit setlocal spell " Spell check git commits
+  set complete+=kspell " complete words in insert with
+
+  " --- Tab complete --- "
+  " tabspace at beginning of line or complete word if not begining
+  set wildmenu " Make tab completion for files/buffers act like bash
+  set wildmode=list:longest,list:full " Tab complete show suggestion list, longest first
+  function! InsertTabWrapper() " tabspace at begining of line or complete word
+    let col = col('.') - 1
+    if !col || getline('.')[col -1] !~ '\k'
+      return "\<tab>"
+    else
+      return "\<c-p>"
+    endif
+  endfunction
+  inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+  inoremap <S-Tab> <c-n>
 
