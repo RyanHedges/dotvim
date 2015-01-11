@@ -39,10 +39,16 @@ set history=10000 " Number of : command entries to keep in history
 
 set showmatch " Show matching bracket when a bracket is inserted
 
+set showcmd " Show imcomplete command
+
+set backspace=2 " Backspace deletes like most programs in insert mode
+
   " --- Searching --- "
   set incsearch   " Find the next match as we type the search
   set hlsearch    " Highlight searches matching the search pattern
   set ignorecase  " ignore case when searching
+  set complete=.,w,b,u,t " current buffer, window buffers, loaded buffers,
+                         " unloaded buffers, tags
 
 set cmdheight=2 " Make the command entry area consume two rows
 
