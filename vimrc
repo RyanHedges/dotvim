@@ -18,6 +18,8 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 
 set cursorline " Underlines the cursors current line in the file
 
+set scrolloff=5 "Minimum number of lines of context to keep around cursor
+
 " ==== Feature Settings ==== "
 
 set nocompatible " Tell vim NOT to run in Vi compatible mode
