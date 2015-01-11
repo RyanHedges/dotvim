@@ -1,3 +1,6 @@
+" enable pathogen to load vim bundles in ~/.vim/bundle/
+execute pathogen#infect()
+
 " ==== Visual Settings ==== "
 
   " --- BASE16 Color --- "
@@ -21,6 +24,8 @@ set cursorline " Underlines the cursors current line in the file
 set scrolloff=5 "Minimum number of lines of context to keep around cursor
 
 " ==== Feature Settings ==== "
+
+set shell=zsh " The shell to use is zsh
 
 set nocompatible " Tell vim NOT to run in Vi compatible mode
 
