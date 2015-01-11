@@ -99,3 +99,38 @@ set background=dark  " Tell vim that colorscheme is on a dark background
 colorscheme base16-ocean  " Use the base16-ocean colorscheme
 ```
 
+###Using Vim Packages
+
+Many text editors make it easy to add packages to enhance or add features.
+ Vim is no exception in the ability to be extended, and can easily be done
+through package managers like
+[pathogen](https://github.com/tpope/vim-pathogen),
+[vundle](https://github.com/gmarik/Vundle.vim), and
+[VAM](https://github.com/MarcWeber/vim-addon-manager). From my research I
+decided to use pathogen because it doesn't do too much for me, which allows me
+to learn more about how vim functions. Many people suggest using submodules
+with pathogen to reference git repositories instead of including them directly and this also seemed like a benefit(and an opportunity to learn).
+
+* Follow the directions on pathogen for creating the `autoload` and `bundle`
+ directories and add `execute pathogen#infect()` to your `vimrc`.
+
+* You'll use the bundle directory to hold all the git submoduels for the
+ packages that you want.
+
+  ```zsh
+  $ cd ~/.vim/bundle
+  $ git submodule add [vim repository url/location]
+  ```
+  Follow any directions provided on the vim package repository after making
+the submodule.
+
+If you are using this repository for your vim setting you'll need to run the
+following commands to get the packages included in your settings.
+
+```zsh
+$ git submodule init
+$ git submodule update
+```
+
+Pathogen will take care of the rest of including them at vim runtime.
+
