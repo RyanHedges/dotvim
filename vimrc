@@ -50,7 +50,7 @@ set showtabline=2 " ALWAYS show tab line at the top
   autocmd FileType markdown setlocal spell " Enable spellchecking in Markdown
   autocmd BufRead,BufNewFile *.md setlocal spell " Spell check md files
   autocmd FileType gitcommit setlocal spell " Spell check git commits
-  set complete+=kspell " complete words in insert with
+  set complete+=kspell " complete words in insert mode
 
   " --- Tab complete --- "
   " tabspace at beginning of line or complete word if not begining
