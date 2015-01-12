@@ -80,3 +80,9 @@ set showtabline=2 " ALWAYS show tab line at the top
   inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
   inoremap <S-Tab> <c-n>
 
+  " --- No Arrow Keys --- "
+  map <Left> :echo "STOP IT!"<cr>
+  map <Right> :echo "STOP IT!"<cr>
+  map <Up> :echo "STOP IT!"<cr>
+  map <Down> :echo "STOP IT!"<cr>
+
