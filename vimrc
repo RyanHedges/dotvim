@@ -1,5 +1,7 @@
 " enable pathogen to load vim bundles in ~/.vim/bundle/
+" Generate help dogumentation with pathogen helptags helper
 execute pathogen#infect()
+execute pathogen#helptags()
 
 " ==== Visual Settings ==== "
 
