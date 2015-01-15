@@ -93,3 +93,13 @@ set showtabline=2 " ALWAYS show tab line at the top
   " ,n will toggle the nerd tree open and close
   map <leader>n :NERDTreeToggle<CR>
 
+  " --- CTRL P --- "
+  " search tags
+  map <leader>gt :CtrlPTag<cr>
+  " search current content of buffer
+  map <leader>f :CtrlP .<cr>
+  " search inside all files
+  map <leader>F :CtrlP %%<cr>
+  " search buffer
+  map <leader>b :CtrlPBuffer<cr>
+
