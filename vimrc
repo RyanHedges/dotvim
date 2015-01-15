@@ -89,3 +89,7 @@ set showtabline=2 " ALWAYS show tab line at the top
   map <Up> :echo "STOP IT!"<cr>
   map <Down> :echo "STOP IT!"<cr>
 
+  " --- NERDTREE --- "
+  " ,n will toggle the nerd tree open and close
+  map <leader>n :NERDTreeToggle<CR>
+
