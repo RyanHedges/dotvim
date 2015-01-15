@@ -42,6 +42,7 @@ set textwidth=78  " Set the word wrap character limit to 78
 
 set history=10000 " Number of : command entries to keep in history
 
+set undolevels=1000 " Larger number of levels of undo
 set showmatch " Show matching bracket when a bracket is inserted
 
 set showcmd " Show imcomplete command
