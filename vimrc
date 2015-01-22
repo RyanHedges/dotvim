@@ -103,3 +103,6 @@ set showtabline=2 " ALWAYS show tab line at the top
   " search buffer
   map <leader>b :CtrlPBuffer<cr>
 
+  " --- Ack / Ag --- "
+  let g:ackprg = 'ag --nogroup --nocolor --column' " use Ag with ack.vim
+
