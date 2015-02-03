@@ -106,3 +106,11 @@ set showtabline=2 " ALWAYS show tab line at the top
   " --- Ack / Ag --- "
   let g:ackprg = 'ag --nogroup --nocolor --column' " use Ag with ack.vim
 
+  " --- RSpec.Vim --- "
+  map <Leader>t :call RunCurrentSpecFile()<CR>
+  map <Leader>s :call RunNearestSpec()<CR>
+  map <Leader>l :call RunLastSpec()<CR>
+  map <Leader>a :call RunAllSpecs()<CR>
+  let g:rspec_command = "bundle exec rspec {spec}"
+  let g:rspec_runner = "os_x_iterm"
+
