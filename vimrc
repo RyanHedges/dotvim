@@ -25,6 +25,9 @@ set cursorline " Underlines the cursors current line in the file
 
 set scrolloff=5 "Minimum number of lines of context to keep around cursor
 
+let &t_SI = "\<Esc>]50;CursorShape=1\x7" " insert mode vertical bar cursor
+let &t_EI = "\<Esc>]50;CursorShape=0\x7" " all other modes bloack cursor
+
 " ==== Feature Settings ==== "
 
 set shell=zsh " The shell to use is zsh
