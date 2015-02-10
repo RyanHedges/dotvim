@@ -98,6 +98,7 @@ set showtabline=2 " ALWAYS show tab line at the top
   " --- NERDTREE --- "
   " ,n will toggle the nerd tree open and close
   map <leader>n :NERDTreeToggle<CR>
+  let g:NERDTreeShowHidden=1 " Show hidden files in nerdtre
 
   " --- CTRL P --- "
   " search tags
