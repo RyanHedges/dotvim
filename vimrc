@@ -43,6 +43,9 @@ set nocompatible " Tell vim NOT to run in Vi compatible mode
 
 let mapleader = "," " Remap <Leader> key from \ (backslash) to , (comma)
 
+" remap esc key for exiting insert mode
+:imap jk <Esc>
+
 set textwidth=78  " Set the word wrap character limit to 78
 
 set history=10000 " Number of : command entries to keep in history
