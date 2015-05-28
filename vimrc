@@ -104,14 +104,15 @@ set showtabline=2 " ALWAYS show tab line at the top
   " search tags
   map <leader>gt :CtrlPTag<cr>
   " search current content of buffer
-  map <leader>f :CtrlP .<cr>
+  map <leader>p :CtrlP .<cr>
   " search inside all files
-  map <leader>F :CtrlP %%<cr>
+  map <leader>P :CtrlP %%<cr>
   " search buffer
   map <leader>b :CtrlPBuffer<cr>
 
   " --- Ack / Ag --- "
   let g:ackprg = 'ag --nogroup --nocolor --column' " use Ag with ack.vim
+  nnoremap <leader>f :Ack<space>
 
   " --- RSpec.Vim --- "
   map <Leader>t :call RunCurrentSpecFile()<CR>
