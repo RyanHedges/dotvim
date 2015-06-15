@@ -46,6 +46,9 @@ let mapleader = "," " Remap <Leader> key from \ (backslash) to , (comma)
 " remap esc key for exiting insert mode
 :imap jk <Esc>
 
+" cyphactor/vim-open-alternate
+nnoremap <leader>m :OpenAlternate<cr>
+
 set textwidth=78  " Set the word wrap character limit to 78
 
 set history=10000 " Number of : command entries to keep in history
@@ -112,7 +115,7 @@ set showtabline=2 " ALWAYS show tab line at the top
 
   " --- Ack / Ag --- "
   let g:ackprg = 'ag --nogroup --nocolor --column' " use Ag with ack.vim
-  nnoremap <leader>f :Ack<space>
+  nnoremap <leader>f :Ack!<space>
 
   " --- RSpec.Vim --- "
   map <Leader>t :call RunCurrentSpecFile()<CR>
