@@ -44,6 +44,7 @@ set shell=zsh " The shell to use is zsh
 
 set nocompatible " Tell vim NOT to run in Vi compatible mode
 
+filetype plugin indent on "smart indenting using ==
   " --- Tabs --- "
   set expandtab     " Use spaces to skip or insert when <BS>ing or <Tab>ing
   set tabstop=2     " Two spaces for tab
