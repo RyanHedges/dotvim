@@ -77,6 +77,7 @@ set backspace=2 " Backspace deletes like most programs in insert mode
   set ignorecase  " ignore case when searching
   set complete=.,w,b,u,t " current buffer, window buffers, loaded buffers,
                          " unloaded buffers, tags
+  map <leader>c :nohlsearch<cr>
 
 set cmdheight=2 " Make the command entry area consume two rows
 
