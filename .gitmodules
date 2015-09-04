@@ -16,3 +16,6 @@
 [submodule "bundle/vim-open-alternate"]
 	path = bundle/vim-open-alternate
 	url = git@github.com:cyphactor/vim-open-alternate.git
+[submodule "bundle/vim-test-recall"]
+	path = bundle/vim-test-recall
+	url = git@github.com:cyphactor/vim-test-recall.git
