@@ -21,6 +21,12 @@ set numberwidth=5 " Min number of characters to use for the line number column
 syntax on " enable syntax
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 
+" Jump to last cursor position unless it's invalid or in an event handler
+autocmd BufReadPost *
+  \ if line("'\"") > 0 && line("'\"") <= line("$") |
+  \   exe "normal g`\"" |
+  \ endif
+
 set cursorline " Underlines the cursors current line in the file
 
 set scrolloff=5 "Minimum number of lines of context to keep around cursor
@@ -129,10 +135,10 @@ set showtabline=2 " ALWAYS show tab line at the top
   let g:ackprg = 'ag --nogroup --nocolor --column' " use Ag with ack.vim
   nnoremap <leader>f :Ack!<space>
 
-  " --- Test Recall --- "
+  " --- cyphactor/Test Recall --- "
   map <leader>t :call RunAllTestsInCurrentTestFile()<cr>
   map <leader>T :call RunNearestTest()<cr>
   map <leader>a :call RunAllRSpecTests()<cr>
   map <leader>c :call RunAllCucumberFeatures()<cr>
   map <leader>w :call RunWipCucumberFeatures()<cr>
-" let g:vim_test_recall_rspec_command = ‘whatever command you want'
+  let g:vim_test_recall_rspec_command = 'bundle exec rspec'
