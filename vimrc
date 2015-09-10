@@ -136,9 +136,9 @@ set showtabline=2 " ALWAYS show tab line at the top
   nnoremap <leader>f :Ack!<space>
 
   " --- cyphactor/Test Recall --- "
-  map <leader>t :call RunAllTestsInCurrentTestFile()<cr>
-  map <leader>T :call RunNearestTest()<cr>
+  map <leader>t :call RunNearestTest()<cr>
+  map <leader>T :call RunAllTestsInCurrentTestFile()<cr>
   map <leader>a :call RunAllRSpecTests()<cr>
-  map <leader>c :call RunAllCucumberFeatures()<cr>
-  map <leader>w :call RunWipCucumberFeatures()<cr>
+  "map <leader>c :call RunAllCucumberFeatures()<cr>
+  "map <leader>w :call RunWipCucumberFeatures()<cr>
   let g:vim_test_recall_rspec_command = 'bundle exec rspec'
