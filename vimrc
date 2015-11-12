@@ -71,6 +71,10 @@ set textwidth=78  " Set the word wrap character limit to 78
 
 set history=10000 " Number of : command entries to keep in history
 
+" Ex mode command history behavior without arrow keys
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
 set undolevels=1000 " Larger number of levels of undo
 set showmatch " Show matching bracket when a bracket is inserted
 
@@ -131,6 +135,7 @@ set showtabline=2 " ALWAYS show tab line at the top
   map <leader>P :CtrlP %%<cr>
   " search buffer
   map <leader>b :CtrlPBuffer<cr>
+  let g:ctrlp_show_hidden = 1
 
   " --- Ack / Ag --- "
   let g:ackprg = 'ag --nogroup --nocolor --column' " use Ag with ack.vim
