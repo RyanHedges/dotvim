@@ -22,3 +22,4 @@
 [submodule "bundle/vim-marked"]
 	path = bundle/vim-marked
 	url = git@github.com:itspriddle/vim-marked.git
+  ignore = dirty
