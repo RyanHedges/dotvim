@@ -64,8 +64,19 @@ let mapleader = "," " Remap <Leader> key from \ (backslash) to , (comma)
 " remap esc key for exiting insert mode
 :imap jk <Esc>
 
-" cyphactor/vim-open-alternate
-nnoremap <leader>m :OpenAlternate<cr>
+" Run a given vim command on the results of alt from a given path.
+" See usage below.
+function! AltCommand(path, vim_command)
+  let l:alternate = system("~/bin/alt " . a:path)
+  if empty(l:alternate)
+    echo "No alternate file for " . a:path . " exists!"
+  else
+    exec a:vim_command . " " . l:alternate
+  endif
+endfunction
+
+" Find the alternate file for the current path and open it
+nnoremap <leader>m :w<cr>:call AltCommand(expand('%'), ':e')<cr>
 
 set textwidth=78  " Set the word wrap character limit to 78
 
