@@ -21,6 +21,7 @@ set numberwidth=5 " Min number of characters to use for the line number column
 syntax on " enable syntax
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.rabl set filetype=ruby
+autocmd BufRead,BufNewFile *.slim set filetype=ruby
 
 " Jump to last cursor position unless it's invalid or in an event handler
 autocmd BufReadPost *
