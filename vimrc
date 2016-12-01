@@ -65,6 +65,9 @@ let mapleader = "," " Remap <Leader> key from \ (backslash) to , (comma)
 " remap esc key for exiting insert mode
 :imap jk <Esc>
 
+" Paste toggle
+set pastetoggle=<F7>
+
 " Run a given vim command on the results of alt from a given path.
 " See usage below.
 function! AltCommand(path, vim_command)
